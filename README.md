@@ -43,19 +43,32 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 2. Click the ➕ icon
 3. Enter section name
 
+![Create Section](./resources/createsection.gif)
+
 ### Bookmark Current Workspace
 Click the bookmark icon in the top right editor title bar.
+
+![Bookmark Workspace](./resources/addworkspace.gif)
 
 ### Add Project from Explorer
 1. Right-click any folder in VS Code Explorer
 2. Click **Add to Bookshelf**
 3. It will be added to the root of Bookshelf
 
+![Bookmark directory](./resources/bookmarkdir.gif)
+
+## Open project from Bookshelf
+Click on any project to open the project in new window
+
+![Open project](./resources/openproject.gif)
+
 ### Remove a Project
 Right-click on the project → **Remove from Bookshelf**
+![Remove project](./resources/removeproject.png)
 
 ### Rename or Delete a Section
 Right-click on the section → choose action
+![Rename Delete section](./resources/renamedelsection.png)
 
 ### Refresh Bookshelf
 Click the refresh icon to:

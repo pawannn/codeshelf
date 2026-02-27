@@ -207,8 +207,6 @@ class ShelfItem extends vscode.TreeItem {
             };
         }
 
-
-
         this.contextValue = type;
     }
 }
