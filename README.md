@@ -55,7 +55,7 @@ Click the bookmark icon in the top right editor title bar.
 2. Click **Add to CodeShelf**
 3. It will be added to the root of CodeShelf
 
-![Bookmark directory](./resources/bookmarkdir.gif)
+![Bookmark directory](./resources/addtobookshelf.png)
 
 ## Open project from CodeShelf
 Click on any project to open the project in new window
