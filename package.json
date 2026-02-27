@@ -9,15 +9,69 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "bookshelf",
+          "title": "Bookshelf",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "bookshelf": [
+        {
+          "icon": "",
+          "id": "bookshelfView",
+          "name": "Projects"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "bookshelf.helloWorld",
-        "title": "Hello World"
+        "command": "bookshelf.addSection",
+        "title": "Add Section"
+      },
+      {
+        "command": "bookshelf.removeProject",
+        "title": "Remove from Bookshelf"
+      },
+      {
+        "command": "bookshelf.bookmarkWorkspace",
+        "title": "Bookmark Workspace",
+        "icon": {
+          "light": "resources/bookmark.svg",
+          "dark": "resources/bookmark.svg"
+        }
       }
-    ]
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "bookshelf.addSection",
+          "when": "view == bookshelfView",
+          "group": "navigation"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "bookshelf.bookmarkWorkspace",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "bookshelf.removeProject",
+          "when": "view == bookshelfView && viewItem == project",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
