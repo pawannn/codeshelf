@@ -135,6 +135,25 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
 
         this.refresh();
     }
+
+    renameSection(sectionId: string, newName: string) {
+        const section = this.state.sections.find(
+            s => s.id === sectionId
+        );
+
+        if (!section) { return; }
+
+        section.name = newName;
+        this.refresh();
+    }
+
+    deleteSection(sectionId: string) {
+        this.state.sections = this.state.sections.filter(
+            s => s.id !== sectionId
+        );
+
+        this.refresh();
+    }
 }
 
 class ShelfItem extends vscode.TreeItem {

@@ -49,7 +49,47 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	);
 
-	context.subscriptions.push(addSection, openProject, bookmarkWorkSpace, removeProject);
+	const renameSection = vscode.commands.registerCommand(
+		'bookshelf.renameSection',
+		async (item: any) => {
+			if (!item?.data) { return; }
+
+			const newName = await vscode.window.showInputBox({
+				prompt: "Enter new section name",
+				value: item.data.name
+			});
+
+			if (!newName) { return; }
+
+			provider.renameSection(item.data.id, newName);
+		}
+	);
+
+	const deleteSection = vscode.commands.registerCommand(
+		'bookshelf.deleteSection',
+		async (item: any) => {
+			if (!item?.data) { return; }
+
+			const confirm = await vscode.window.showWarningMessage(
+				`Delete section "${item.data.name}" and all its projects?`,
+				{ modal: true },
+				"Delete"
+			);
+
+			if (confirm === "Delete") {
+				provider.deleteSection(item.data.id);
+			}
+		}
+	);
+
+	context.subscriptions.push(
+		addSection,
+		openProject,
+		bookmarkWorkSpace,
+		removeProject,
+		renameSection,
+		deleteSection
+	);
 }
 
 export function deactivate() { }

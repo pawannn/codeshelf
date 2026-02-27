@@ -42,6 +42,14 @@
         "title": "Remove from Bookshelf"
       },
       {
+        "command": "bookshelf.renameSection",
+        "title": "Rename Section"
+      },
+      {
+        "command": "bookshelf.deleteSection",
+        "title": "Delete Section"
+      },
+      {
         "command": "bookshelf.bookmarkWorkspace",
         "title": "Bookmark Workspace",
         "icon": {
@@ -68,6 +76,16 @@
         {
           "command": "bookshelf.removeProject",
           "when": "view == bookshelfView && viewItem == project",
+          "group": "navigation"
+        },
+        {
+          "command": "bookshelf.renameSection",
+          "when": "view == bookshelfView && viewItem == section",
+          "group": "navigation"
+        },
+        {
+          "command": "bookshelf.deleteSection",
+          "when": "view == bookshelfView && viewItem == section",
           "group": "navigation"
         }
       ]
