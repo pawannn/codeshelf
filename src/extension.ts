@@ -82,13 +82,21 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	);
 
+	const refreshCommand = vscode.commands.registerCommand(
+		'bookshelf.refresh',
+		() => {
+			provider.validateProjects();
+		}
+	);
+
 	context.subscriptions.push(
 		addSection,
 		openProject,
 		bookmarkWorkSpace,
 		removeProject,
 		renameSection,
-		deleteSection
+		deleteSection,
+		refreshCommand
 	);
 }
 

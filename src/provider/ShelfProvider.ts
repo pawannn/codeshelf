@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { ShelfState, Section, Project } from '../models/types';
+import * as fs from 'fs';
 
 export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
 
@@ -15,6 +16,8 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
             sections: [],
             rootProjects: []
         };
+
+        this.validateProjects();
     }
 
     refresh() {
@@ -151,6 +154,22 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
         this.state.sections = this.state.sections.filter(
             s => s.id !== sectionId
         );
+
+        this.refresh();
+    }
+
+    validateProjects() {
+        // Clean root projects
+        this.state.rootProjects = this.state.rootProjects.filter(project =>
+            project.path && fs.existsSync(project.path)
+        );
+
+        // Clean section projects
+        this.state.sections.forEach(section => {
+            section.projects = section.projects.filter(project =>
+                project.path && fs.existsSync(project.path)
+            );
+        });
 
         this.refresh();
     }

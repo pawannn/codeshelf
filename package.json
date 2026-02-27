@@ -19,7 +19,7 @@
         {
           "id": "bookshelf",
           "title": "Bookshelf",
-          "icon": "resources/icon.svg"
+          "icon": "resources/bookmark-dark.svg"
         }
       ]
     },
@@ -35,7 +35,11 @@
     "commands": [
       {
         "command": "bookshelf.addSection",
-        "title": "Add Section"
+        "title": "Add Section",
+        "icon": {
+          "light": "resources/plus-icon-light.svg",
+          "dark": "resources/plus-icon-dark.svg"
+        }
       },
       {
         "command": "bookshelf.removeProject",
@@ -53,8 +57,16 @@
         "command": "bookshelf.bookmarkWorkspace",
         "title": "Bookmark Workspace",
         "icon": {
-          "light": "resources/bookmark.svg",
-          "dark": "resources/bookmark.svg"
+          "light": "resources/bookmark-light.svg",
+          "dark": "resources/bookmark-dark.svg"
+        }
+      },
+      {
+        "command": "bookshelf.refresh",
+        "title": "Refresh Bookshelf",
+        "icon": {
+          "light": "resources/refresh-icon-light.svg",
+          "dark": "resources/refresh-icon-dark.svg"
         }
       }
     ],
@@ -64,6 +76,11 @@
           "command": "bookshelf.addSection",
           "when": "view == bookshelfView",
           "group": "navigation"
+        },
+        {
+          "command": "bookshelf.refresh",
+          "when": "view == bookshelfView",
+          "group": "navigation@2"
         }
       ],
       "editor/title": [
