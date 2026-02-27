@@ -1,9 +1,9 @@
-# 📚 Bookshelf - Bookmark & Project Manager for VS Code
+# 📚 CodeShelf - Bookmark & Project Manager for VS Code
 Lightweight project manager and bookmark extension for organizing and launching multiple projects inside VS Code.
 
 **Organize your projects. Own your workspace.**
 
-Bookshelf is a lightweight VS Code extension that helps you organize, group, and manage your local projects with sections and drag-and-drop support, all inside the Activity Bar.
+CodeShelf is a lightweight VS Code extension that helps you organize, group, and manage your local projects with sections and drag-and-drop support, all inside the Activity Bar.
 
 ---
 
@@ -15,8 +15,8 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 - Delete sections (removes all projects inside)
 
 ### Project Bookmarks
-- Add current workspace to Bookshelf
-- Add folders directly from Explorer (right-click → **Add to Bookshelf**)
+- Add current workspace to CodeShelf
+- Add folders directly from Explorer (right-click → **Add to CodeShelf**)
 - Prevent duplicate projects (based on path)
 
 ### Drag & Drop
@@ -25,7 +25,7 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 - Organize visually with ease
 
 ### Remove Projects
-- Right-click project → **Remove from Bookshelf**
+- Right-click project → **Remove from CodeShelf**
 
 ### Auto Cleanup
 - Automatically removes projects whose folders no longer exist on load
@@ -39,7 +39,7 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 ## How to Use
 
 ### Add a Section
-1. Open **Bookshelf** from the Activity Bar
+1. Open **CodeShelf** from the Activity Bar
 2. Click the ➕ icon
 3. Enter section name
 
@@ -52,25 +52,25 @@ Click the bookmark icon in the top right editor title bar.
 
 ### Add Project from Explorer
 1. Right-click any folder in VS Code Explorer
-2. Click **Add to Bookshelf**
-3. It will be added to the root of Bookshelf
+2. Click **Add to CodeShelf**
+3. It will be added to the root of CodeShelf
 
 ![Bookmark directory](./resources/bookmarkdir.gif)
 
-## Open project from Bookshelf
+## Open project from CodeShelf
 Click on any project to open the project in new window
 
 ![Open project](./resources/openproject.gif)
 
 ### Remove a Project
-Right-click on the project → **Remove from Bookshelf**
+Right-click on the project → **Remove from CodeShelf**
 ![Remove project](./resources/removeproject.png)
 
 ### Rename or Delete a Section
 Right-click on the section → choose action
 ![Rename Delete section](./resources/renamedelsection.png)
 
-### Refresh Bookshelf
+### Refresh CodeShelf
 Click the refresh icon to:
 - Remove deleted/missing project folders
 - Revalidate project paths
@@ -79,13 +79,13 @@ Click the refresh icon to:
 
 ## How It Works
 
-Bookshelf stores project paths locally using VS Code’s `globalState`.
+CodeShelf stores project paths locally using VS Code’s `globalState`.
 
 Each project is uniquely identified by its file system path to prevent duplicates.
 
 ---
 
-## Why Use Bookshelf as Your Project Manager ??
+## Why Use CodeShelf as Your Project Manager ??
 
 If you:
 - Work across many repositories
@@ -93,13 +93,13 @@ If you:
 - Want visual grouping of projects
 - Need fast project launching
 
-Bookshelf keeps your development life structured.
+CodeShelf keeps your development life structured.
 
 ---
 
 ## Data & Privacy
 
-Bookshelf:
+CodeShelf:
 - Does not collect data
 - Does not send data externally
 - Stores everything locally on your machine
