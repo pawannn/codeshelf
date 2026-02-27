@@ -2,7 +2,7 @@
   "name": "codeshelf",
   "displayName": "CodeShelf - Project Bookmarks & Manager",
   "description": "A lightweight project manager and bookmark tool for VS Code. Organize, group, and launch projects with sections and drag-and-drop.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "PawanKalyan",
   "license": "MIT",
   "icon": "bookshelf.png",
