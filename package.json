@@ -1,6 +1,6 @@
 {
-  "name": "project-bookshelf",
-  "displayName": "Bookshelf - Project Bookmarks & Project Manager",
+  "name": "codeshelf",
+  "displayName": "CodeShelf - Project Bookmarks & Project Manager",
   "description": "A lightweight project manager and bookmark tool for VS Code. Organize, group, and launch projects with sections and drag-and-drop.",
   "version": "0.0.1",
   "publisher": "PawanKalyan",
@@ -8,7 +8,7 @@
   "icon": "bookshelf.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pawannn/bookshelf"
+    "url": "https://github.com/pawannn/codeshelf"
   },
   "engines": {
     "vscode": "^1.109.0"
