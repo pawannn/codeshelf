@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { ShelfProvider } from './provider/ShelfProvider';
 import { ShelfDragAndDropController } from './provider/DragAndDropController';
+import path from 'path/win32';
 
 export function activate(context: vscode.ExtensionContext) {
 	const provider = new ShelfProvider(context);
@@ -89,6 +90,19 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	);
 
+	const addFromExplorer = vscode.commands.registerCommand(
+		'bookshelf.addFromExplorer',
+		(uri: vscode.Uri) => {
+			if (!uri) { return; }
+
+			provider.addProjectToRoot({
+				id: Date.now().toString(),
+				label: path.basename(uri.fsPath),
+				path: uri.fsPath
+			});
+		}
+	);
+
 	context.subscriptions.push(
 		addSection,
 		openProject,
@@ -96,7 +110,8 @@ export function activate(context: vscode.ExtensionContext) {
 		removeProject,
 		renameSection,
 		deleteSection,
-		refreshCommand
+		refreshCommand,
+		addFromExplorer
 	);
 }
 

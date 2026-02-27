@@ -68,6 +68,10 @@
           "light": "resources/refresh-icon-light.svg",
           "dark": "resources/refresh-icon-dark.svg"
         }
+      },
+      {
+        "command": "bookshelf.addFromExplorer",
+        "title": "Add to Bookshelf"
       }
     ],
     "menus": {
@@ -104,6 +108,13 @@
           "command": "bookshelf.deleteSection",
           "when": "view == bookshelfView && viewItem == section",
           "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "bookshelf.addFromExplorer",
+          "when": "explorerResourceIsFolder && resourceScheme == file",
+          "group": "navigation@100"
         }
       ]
     }
