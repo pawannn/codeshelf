@@ -7,49 +7,49 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 
 ---
 
-## ✨ Features
+## Features
 
-### 📂 Sections
+### Sections
 - Create custom sections (Work, Personal, Clients, etc.)
 - Rename sections
 - Delete sections (removes all projects inside)
 
-### 📌 Project Bookmarks
+### Project Bookmarks
 - Add current workspace to Bookshelf
 - Add folders directly from Explorer (right-click → **Add to Bookshelf**)
 - Prevent duplicate projects (based on path)
 
-### 🔁 Drag & Drop
+### Drag & Drop
 - Drag projects into sections
 - Move projects between sections
 - Organize visually with ease
 
-### 🗑 Remove Projects
+### Remove Projects
 - Right-click project → **Remove from Bookshelf**
 
-### 🔄 Auto Cleanup
+### Auto Cleanup
 - Automatically removes projects whose folders no longer exist on load
 - Manual **Refresh** button to revalidate all project paths
 
-### 🚀 Quick Access
+### Quick Access
 - Click a project to open it in a new VS Code window
 
 ---
 
-## 🖥 How to Use
+## How to Use
 
 ### Add a Section
 1. Open **Bookshelf** from the Activity Bar
 2. Click the ➕ icon
 3. Enter section name
 
+### Bookmark Current Workspace
+Click the bookmark icon in the top right editor title bar.
+
 ### Add Project from Explorer
 1. Right-click any folder in VS Code Explorer
 2. Click **Add to Bookshelf**
 3. It will be added to the root of Bookshelf
-
-### Bookmark Current Workspace
-Click the bookmark icon in the editor title bar.
 
 ### Remove a Project
 Right-click on the project → **Remove from Bookshelf**
@@ -64,7 +64,7 @@ Click the refresh icon to:
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 Bookshelf stores project paths locally using VS Code’s `globalState`.
 
@@ -72,7 +72,7 @@ Each project is uniquely identified by its file system path to prevent duplicate
 
 ---
 
-## 🎯 Why Use Bookshelf as Your Project Manager ??
+## Why Use Bookshelf as Your Project Manager ??
 
 If you:
 - Work across many repositories
@@ -84,7 +84,7 @@ Bookshelf keeps your development life structured.
 
 ---
 
-## 🔒 Data & Privacy
+## Data & Privacy
 
 Bookshelf:
 - Does not collect data

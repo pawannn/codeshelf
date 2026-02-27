@@ -85,6 +85,10 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
 
         this.state.rootProjects.push(project);
         this.refresh();
+
+        vscode.window.showInformationMessage(
+            `Added "${project.label}" to Bookshelf.`
+        );
     }
 
     openProject(project: Project) {
@@ -189,13 +193,21 @@ class ShelfItem extends vscode.TreeItem {
                 : vscode.TreeItemCollapsibleState.None
         );
 
+        if (type === 'section') {
+            this.iconPath = new vscode.ThemeIcon("folder");
+        }
+
         if (type === 'project') {
+            this.iconPath = new vscode.ThemeIcon("repo");
+
             this.command = {
                 command: 'bookshelf.openProject',
                 title: 'Open Project',
                 arguments: [data]
             };
         }
+
+
 
         this.contextValue = type;
     }
