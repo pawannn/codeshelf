@@ -1,7 +1,7 @@
 {
   "name": "bookshelf",
-  "displayName": "bookshelf",
-  "description": "Organize your projects. Own your workspace.",
+  "displayName": "Bookshelf - Project Bookmarks & Project Manager",
+  "description": "A lightweight project manager and bookmark tool for VS Code. Organize, group, and launch projects with sections and drag-and-drop.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.109.0"
@@ -144,5 +144,23 @@
     "typescript": "^5.9.3",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2"
-  }
+  },
+  "keywords": [
+    "bookmark",
+    "bookmarks",
+    "workspace bookmark",
+    "project groups",
+    "repository bookmark",
+    "bookshelf",
+    "project manager",
+    "project manager vscode",
+    "vscode project manager",
+    "project bookmarks",
+    "workspace manager",
+    "project organizer",
+    "project launcher",
+    "multiple projects",
+    "repository manager",
+    "folder bookmarks"
+  ]
 }

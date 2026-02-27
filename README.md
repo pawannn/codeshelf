@@ -1,4 +1,5 @@
-# 📚 Bookshelf
+# 📚 Bookshelf - Bookmark & Project Manager for VS Code
+Lightweight project manager and bookmark extension for organizing and launching multiple projects inside VS Code.
 
 **Organize your projects. Own your workspace.**
 
@@ -15,7 +16,7 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 
 ### 📌 Project Bookmarks
 - Add current workspace to Bookshelf
-- Add folders from Explorer (via context menu)
+- Add folders directly from Explorer (right-click → **Add to Bookshelf**)
 - Prevent duplicate projects (based on path)
 
 ### 🔁 Drag & Drop
@@ -27,8 +28,8 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 - Right-click project → **Remove from Bookshelf**
 
 ### 🔄 Auto Cleanup
-- Automatically removes projects whose folders no longer exist
-- Manual **Refresh** button to revalidate all projects
+- Automatically removes projects whose folders no longer exist on load
+- Manual **Refresh** button to revalidate all project paths
 
 ### 🚀 Quick Access
 - Click a project to open it in a new VS Code window
@@ -38,9 +39,14 @@ Bookshelf is a lightweight VS Code extension that helps you organize, group, and
 ## 🖥 How to Use
 
 ### Add a Section
-1. Open **Bookshelf** from Activity Bar
+1. Open **Bookshelf** from the Activity Bar
 2. Click the ➕ icon
 3. Enter section name
+
+### Add Project from Explorer
+1. Right-click any folder in VS Code Explorer
+2. Click **Add to Bookshelf**
+3. It will be added to the root of Bookshelf
 
 ### Bookmark Current Workspace
 Click the bookmark icon in the editor title bar.
@@ -66,7 +72,7 @@ Each project is uniquely identified by its file system path to prevent duplicate
 
 ---
 
-## Why Bookshelf?
+## 🎯 Why Use Bookshelf as Your Project Manager ??
 
 If you:
 - Work across many repositories
@@ -83,7 +89,7 @@ Bookshelf keeps your development life structured.
 Bookshelf:
 - Does not collect data
 - Does not send data externally
-- Stores everything locally
+- Stores everything locally on your machine
 
 ---
 
