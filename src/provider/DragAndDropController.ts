@@ -3,8 +3,8 @@ import { ShelfProvider } from './ShelfProvider';
 
 export class ShelfDragAndDropController implements vscode.TreeDragAndDropController<any> {
 
-    dropMimeTypes = ['application/vnd.code.tree.bookshelfView'];
-    dragMimeTypes = ['application/vnd.code.tree.bookshelfView'];
+    dropMimeTypes = ['application/vnd.code.tree.CodeShelfView'];
+    dragMimeTypes = ['application/vnd.code.tree.CodeShelfView'];
 
     constructor(private provider: ShelfProvider) { }
 
@@ -13,7 +13,7 @@ export class ShelfDragAndDropController implements vscode.TreeDragAndDropControl
         dataTransfer: vscode.DataTransfer
     ): Promise<void> {
         dataTransfer.set(
-            'application/vnd.code.tree.bookshelfView',
+            'application/vnd.code.tree.CodeShelfView',
             new vscode.DataTransferItem(source)
         );
     }
@@ -24,7 +24,7 @@ export class ShelfDragAndDropController implements vscode.TreeDragAndDropControl
     ): Promise<void> {
 
         const transferItem = dataTransfer.get(
-            'application/vnd.code.tree.bookshelfView'
+            'application/vnd.code.tree.CodeShelfView'
         );
 
         if (!transferItem) {

@@ -2,10 +2,10 @@
   "name": "codeshelf",
   "displayName": "CodeShelf - Project Bookmarks & Manager",
   "description": "A lightweight project manager and bookmark tool for VS Code. Organize, group, and launch projects with sections and drag-and-drop.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "PawanKalyan",
   "license": "MIT",
-  "icon": "bookshelf.png",
+  "icon": "codeshelf.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/pawannn/codeshelf"
@@ -24,24 +24,24 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "bookshelf",
-          "title": "Bookshelf",
+          "id": "CodeShelf",
+          "title": "CodeShelf",
           "icon": "resources/bookmark-dark.svg"
         }
       ]
     },
     "views": {
-      "bookshelf": [
+      "CodeShelf": [
         {
           "icon": "",
-          "id": "bookshelfView",
+          "id": "CodeShelfView",
           "name": "Projects"
         }
       ]
     },
     "commands": [
       {
-        "command": "bookshelf.addSection",
+        "command": "CodeShelf.addSection",
         "title": "Add Section",
         "icon": {
           "light": "resources/plus-icon-light.svg",
@@ -49,19 +49,19 @@
         }
       },
       {
-        "command": "bookshelf.removeProject",
-        "title": "Remove from Bookshelf"
+        "command": "CodeShelf.removeProject",
+        "title": "Remove from CodeShelf"
       },
       {
-        "command": "bookshelf.renameSection",
+        "command": "CodeShelf.renameSection",
         "title": "Rename Section"
       },
       {
-        "command": "bookshelf.deleteSection",
+        "command": "CodeShelf.deleteSection",
         "title": "Delete Section"
       },
       {
-        "command": "bookshelf.bookmarkWorkspace",
+        "command": "CodeShelf.bookmarkWorkspace",
         "title": "Bookmark Workspace",
         "icon": {
           "light": "resources/bookmark-light.svg",
@@ -69,57 +69,57 @@
         }
       },
       {
-        "command": "bookshelf.refresh",
-        "title": "Refresh Bookshelf",
+        "command": "CodeShelf.refresh",
+        "title": "Refresh CodeShelf",
         "icon": {
           "light": "resources/refresh-icon-light.svg",
           "dark": "resources/refresh-icon-dark.svg"
         }
       },
       {
-        "command": "bookshelf.addFromExplorer",
-        "title": "Add to Bookshelf"
+        "command": "CodeShelf.addFromExplorer",
+        "title": "Add to CodeShelf"
       }
     ],
     "menus": {
       "view/title": [
         {
-          "command": "bookshelf.addSection",
-          "when": "view == bookshelfView",
+          "command": "CodeShelf.addSection",
+          "when": "view == CodeShelfView",
           "group": "navigation"
         },
         {
-          "command": "bookshelf.refresh",
-          "when": "view == bookshelfView",
+          "command": "CodeShelf.refresh",
+          "when": "view == CodeShelfView",
           "group": "navigation@2"
         }
       ],
       "editor/title": [
         {
-          "command": "bookshelf.bookmarkWorkspace",
+          "command": "CodeShelf.bookmarkWorkspace",
           "group": "navigation"
         }
       ],
       "view/item/context": [
         {
-          "command": "bookshelf.removeProject",
-          "when": "view == bookshelfView && viewItem == project",
+          "command": "CodeShelf.removeProject",
+          "when": "view == CodeShelfView && viewItem == project",
           "group": "navigation"
         },
         {
-          "command": "bookshelf.renameSection",
-          "when": "view == bookshelfView && viewItem == section",
+          "command": "CodeShelf.renameSection",
+          "when": "view == CodeShelfView && viewItem == section",
           "group": "navigation"
         },
         {
-          "command": "bookshelf.deleteSection",
-          "when": "view == bookshelfView && viewItem == section",
+          "command": "CodeShelf.deleteSection",
+          "when": "view == CodeShelfView && viewItem == section",
           "group": "navigation"
         }
       ],
       "explorer/context": [
         {
-          "command": "bookshelf.addFromExplorer",
+          "command": "CodeShelf.addFromExplorer",
           "when": "explorerResourceIsFolder && resourceScheme == file",
           "group": "navigation@100"
         }
@@ -158,7 +158,7 @@
     "workspace bookmark",
     "project groups",
     "repository bookmark",
-    "bookshelf",
+    "CodeShelf",
     "project manager",
     "project manager vscode",
     "vscode project manager",

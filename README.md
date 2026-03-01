@@ -1,4 +1,4 @@
-# 📚 CodeShelf - Bookmark & Project Manager for VS Code
+# CodeShelf - Bookmark & Project Manager for VS Code
 Lightweight project manager and bookmark extension for organizing and launching multiple projects inside VS Code.
 
 **Organize your projects. Own your workspace.**
@@ -48,29 +48,36 @@ CodeShelf is a lightweight VS Code extension that helps you organize, group, and
 ### Bookmark Current Workspace
 Click the bookmark icon in the top right editor title bar.
 
-![Bookmark Workspace](./resources/addworkspace.gif)
+![Bookmark Workspace](./resources/addworkspace.png)
 
 ### Add Project from Explorer
 1. Right-click any folder in VS Code Explorer
 2. Click **Add to CodeShelf**
 3. It will be added to the root of CodeShelf
 
-![Bookmark directory](./resources/addtobookshelf.png)
+![Bookmark directory](./resources/addtocodeshelf.png)
 
 ## Open project from CodeShelf
 Click on any project to open the project in new window
 
 ![Open project](./resources/openproject.gif)
 
-### Remove a Project
+## Manage your projects by Drag-N-Drop
+- Organize projects effortlessly by dragging them into custom sections.
+- Reorder and regroup projects instantly with smooth, intuitive drag-and-drop support.
+
+![Drag and Drop](./resources/dragndrop.gif)
+
+
+## Remove a Project
 Right-click on the project → **Remove from CodeShelf**
 ![Remove project](./resources/removeproject.png)
 
-### Rename or Delete a Section
+## Rename or Delete a Section
 Right-click on the section → choose action
 ![Rename Delete section](./resources/renamedelsection.png)
 
-### Refresh CodeShelf
+## Refresh CodeShelf
 Click the refresh icon to:
 - Remove deleted/missing project folders
 - Revalidate project paths

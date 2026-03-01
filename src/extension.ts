@@ -5,12 +5,12 @@ import path from 'path/win32';
 
 export function activate(context: vscode.ExtensionContext) {
 	const provider = new ShelfProvider(context);
-	vscode.window.createTreeView('bookshelfView', {
+	vscode.window.createTreeView('CodeShelfView', {
 		treeDataProvider: provider,
 		dragAndDropController: new ShelfDragAndDropController(provider)
 	});
 
-	const addSection = vscode.commands.registerCommand('bookshelf.addSection', async () => {
+	const addSection = vscode.commands.registerCommand('CodeShelf.addSection', async () => {
 		const name = await vscode.window.showInputBox({
 			prompt: 'Enter section name'
 		});
@@ -20,11 +20,11 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	});
 
-	const openProject = vscode.commands.registerCommand('bookshelf.openProject', (project) => {
+	const openProject = vscode.commands.registerCommand('CodeShelf.openProject', (project) => {
 		provider.openProject(project);
 	});
 
-	const bookmarkWorkSpace = vscode.commands.registerCommand('bookshelf.bookmarkWorkspace', () => {
+	const bookmarkWorkSpace = vscode.commands.registerCommand('CodeShelf.bookmarkWorkspace', () => {
 		const folders = vscode.workspace.workspaceFolders;
 		if (!folders) {
 			return;
@@ -40,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	const removeProject = vscode.commands.registerCommand(
-		'bookshelf.removeProject',
+		'CodeShelf.removeProject',
 		(item) => {
 			if (!item) {
 				return;
@@ -51,7 +51,7 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	const renameSection = vscode.commands.registerCommand(
-		'bookshelf.renameSection',
+		'CodeShelf.renameSection',
 		async (item: any) => {
 			if (!item?.data) { return; }
 
@@ -67,7 +67,7 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	const deleteSection = vscode.commands.registerCommand(
-		'bookshelf.deleteSection',
+		'CodeShelf.deleteSection',
 		async (item: any) => {
 			if (!item?.data) { return; }
 
@@ -84,14 +84,14 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	const refreshCommand = vscode.commands.registerCommand(
-		'bookshelf.refresh',
+		'CodeShelf.refresh',
 		() => {
 			provider.validateProjects();
 		}
 	);
 
 	const addFromExplorer = vscode.commands.registerCommand(
-		'bookshelf.addFromExplorer',
+		'CodeShelf.addFromExplorer',
 		(uri: vscode.Uri) => {
 			if (!uri) { return; }
 

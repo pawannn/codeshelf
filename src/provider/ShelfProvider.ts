@@ -12,7 +12,7 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
     private state: ShelfState;
 
     constructor(private context: vscode.ExtensionContext) {
-        this.state = this.context.globalState.get<ShelfState>('bookshelf') || {
+        this.state = this.context.globalState.get<ShelfState>('CodeShelf') || {
             sections: [],
             rootProjects: []
         };
@@ -21,7 +21,7 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
     }
 
     refresh() {
-        this.context.globalState.update('bookshelf', this.state);
+        this.context.globalState.update('CodeShelf', this.state);
         this._onDidChangeTreeData.fire();
     }
 
@@ -78,7 +78,7 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
 
         if (existsInRoot || existsInSections) {
             vscode.window.showInformationMessage(
-                "Project already exists in Bookshelf."
+                "Project already exists in CodeShelf."
             );
             return;
         }
@@ -87,7 +87,7 @@ export class ShelfProvider implements vscode.TreeDataProvider<ShelfItem> {
         this.refresh();
 
         vscode.window.showInformationMessage(
-            `Added "${project.label}" to Bookshelf.`
+            `Added "${project.label}" to CodeShelf.`
         );
     }
 
@@ -201,7 +201,7 @@ class ShelfItem extends vscode.TreeItem {
             this.iconPath = new vscode.ThemeIcon("repo");
 
             this.command = {
-                command: 'bookshelf.openProject',
+                command: 'CodeShelf.openProject',
                 title: 'Open Project',
                 arguments: [data]
             };
